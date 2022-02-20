@@ -1,18 +1,18 @@
 #coding:utf-8
 #Copyright © 2022 df.ぽん. All Rights Reserved.
-character_list=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
-encrypted_character_list=["1q","0h","5w","8v","4c","9d","7l","4w","8a","6z","3k","7s","5p","9j","1x","3h","4f","9p","8q","0r","3t","7r","9e","0n","8q","1j"]
+character_list=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"," "]
+encrypted_character_list=["1q","0h","5w","8v","4c","9d","7l","4w","8a","6z","3k","7s","5p","9j","1x","3h","4f","9p","8q","0r","3t","7r","9e","0n","8q","1j","9k"]
 def main():
     print("\n-----暗号・復号装置-----\n暗号の場合は1を、復号の場合は2を半角数字で入力してください。\n")
     mode_select=input("Mode>>")
     if mode_select=="1":
-        print("\n暗号化したい文章を半角英字のみで入力してください。\n")
+        print("\n暗号化したい文章を半角英字or空白のみで入力してください。\n")
         c_=input("Sentence>>")
         length=len(c_)
         after_c=""
         for i in range(length):
             if (c_[i] in character_list)==False:
-                print("半角英字以外が検出されました。最初からやり直してください。")
+                print("半角英字と空白以外が検出されました。最初からやり直してください。")
                 main()
             else:
                 pass
